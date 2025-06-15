@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -14,65 +15,65 @@ const Recipes: React.FC = () => {
     setSearchQuery(searchFromUrl);
   }, [searchParams]);
 
-  // Mock data with updated images for Margherita and Beef Tacos
+  // Mock data with Romanian recipes
   const mockRecipes = [
     {
       id: 1,
-      title: "Mediterranean Pasta Salad",
-      description: "Fresh and vibrant pasta salad with Mediterranean flavors, perfect for summer gatherings and picnics.",
-      image_url: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=300&fit=crop",
-      ingredients: "Pasta, tomatoes, olives, feta cheese, olive oil",
-      instructions: "Cook pasta, mix with vegetables and dressing",
+      title: "Tochitura Moldoveneasca",
+      description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza.",
+      image_url: "https://images.unsplash.com/photo-1565057824294-36bdf6a28a5c?w=500&h=300&fit=crop",
+      ingredients: "Carne de porc, carnati, oua, ceapa, usturoi, mamaliga",
+      instructions: "Prajeste carnea, adauga carnatii, serveste cu oua si mamaliga",
       created_at: "2024-01-15"
     },
     {
       id: 2,
-      title: "Homemade Pizza Margherita",
-      description: "Classic Italian pizza with fresh basil, mozzarella, and a crispy homemade crust.",
+      title: "Pizza Margherita de Casa",
+      description: "Pizza italiana clasica cu busuioc proaspat, mozzarella si o crusta crocanta facuta in casa.",
       image_url: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop",
-      ingredients: "Pizza dough, tomato sauce, mozzarella, basil",
-      instructions: "Roll dough, add toppings, bake at 450°F",
+      ingredients: "Aluat de pizza, sos de rosii, mozzarella, busuioc",
+      instructions: "Intinde aluatul, adauga toppingurile, coace la 450°F",
       created_at: "2024-01-14"
     },
     {
       id: 3,
-      title: "Chocolate Chip Cookies",
-      description: "Perfectly chewy chocolate chip cookies that melt in your mouth with every bite.",
+      title: "Biscuiti cu Bucati de Ciocolata",
+      description: "Biscuiti perfecti cu bucati de ciocolata care se topesc in gura la fiecare muscatura.",
       image_url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=300&fit=crop",
-      ingredients: "Flour, butter, sugar, chocolate chips, eggs",
-      instructions: "Mix ingredients, form balls, bake for 12 minutes",
+      ingredients: "Faina, unt, zahar, bucati de ciocolata, oua",
+      instructions: "Amesteca ingredientele, formeaza bilute, coace timp de 12 minute",
       created_at: "2024-01-13"
     },
     {
       id: 4,
-      title: "Grilled Salmon with Herbs",
-      description: "Perfectly grilled salmon with fresh herbs and a light lemon glaze.",
-      image_url: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&h=300&fit=crop",
-      ingredients: "Salmon, herbs, lemon, olive oil",
-      instructions: "Season salmon, grill for 6-8 minutes per side",
+      title: "Musaca Traditionala",
+      description: "Musaca delicioasa cu straturi de vinete, carne tocata si sos bechamel cremos.",
+      image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&h=300&fit=crop",
+      ingredients: "Vinete, carne tocata, sos bechamel, rosii, ceapa",
+      instructions: "Stratifică vinetele cu carnea si sosul, coace la cuptor",
       created_at: "2024-01-12"
     },
     {
       id: 5,
-      title: "Caesar Salad",
-      description: "Crispy romaine lettuce with homemade Caesar dressing and parmesan cheese.",
-      image_url: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=500&h=300&fit=crop",
-      ingredients: "Romaine lettuce, Caesar dressing, parmesan, croutons",
-      instructions: "Toss lettuce with dressing, add toppings",
+      title: "Tiramisu Italian",
+      description: "Desert italian clasic cu piscuri inmuiate in cafea si crema mascarpone.",
+      image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&h=300&fit=crop",
+      ingredients: "Piscuri, cafea, mascarpone, oua, zahar, cacao",
+      instructions: "Alternează straturile de piscuri cu crema, raceste peste noapte",
       created_at: "2024-01-11"
     },
     {
       id: 6,
-      title: "Beef Tacos",
-      description: "Flavorful beef tacos with fresh toppings and homemade salsa.",
-      image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&h=300&fit=crop",
-      ingredients: "Ground beef, taco shells, lettuce, tomatoes, cheese",
-      instructions: "Cook beef with spices, assemble tacos with toppings",
+      title: "Chec de Casa",
+      description: "Chec pufos si aromat de casa, perfect pentru micul dejun sau o gustare dulce.",
+      image_url: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&h=300&fit=crop",
+      ingredients: "Faina, oua, zahar, lapte, unt, praf de copt",
+      instructions: "Amesteca ingredientele, toarna in forma, coace la cuptor",
       created_at: "2024-01-10"
     }
   ];
 
-  const categories = ['all', 'breakfast', 'lunch', 'dinner', 'dessert', 'snack'];
+  const categories = ['toate', 'mic dejun', 'pranz', 'cina', 'desert', 'gustare'];
 
   const filteredRecipes = mockRecipes.filter(recipe => {
     const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -95,10 +96,10 @@ const Recipes: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Our Recipe Collection
+            Colectia Noastra de Retete
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Discover delicious recipes from around the world, carefully curated for every taste and occasion.
+            Descopera retete delicioase din intreaga lume, atent selectate pentru fiecare gust si ocazie.
           </p>
         </div>
 
@@ -110,7 +111,7 @@ const Recipes: React.FC = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search recipes by name or ingredient..."
+                placeholder="Cauta retete dupa nume sau ingredient..."
                 value={searchQuery}
                 onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
@@ -139,8 +140,8 @@ const Recipes: React.FC = () => {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600 dark:text-gray-400">
-            Showing {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''}
-            {searchQuery && ` for "${searchQuery}"`}
+            Se afiseaza {filteredRecipes.length} reteta{filteredRecipes.length !== 1 ? 's' : ''}
+            {searchQuery && ` pentru "${searchQuery}"`}
           </p>
         </div>
 
@@ -157,16 +158,16 @@ const Recipes: React.FC = () => {
               <Search className="w-12 h-12 text-gray-400" />
             </div>
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-              No recipes found
+              Nu s-au gasit retete
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Try adjusting your search or browse all recipes.
+              Incearca sa ajustezi cautarea sau navighează prin toate retetele.
             </p>
             <button
               onClick={() => handleSearchChange('')}
               className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-all duration-300"
             >
-              Clear Search
+              Sterge Cautarea
             </button>
           </div>
         )}

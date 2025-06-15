@@ -7,21 +7,21 @@ const Home: React.FC = () => {
   const featuredRecipes = [
     {
       id: 1,
-      title: "Mediterranean Pasta Salad",
-      description: "Fresh and vibrant pasta salad with Mediterranean flavors",
-      image_url: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=300&fit=crop",
+      title: "Tochitura Moldoveneasca",
+      description: "Traditionala tochitura moldoveneasca cu carne de porc si carnati",
+      image_url: "https://images.unsplash.com/photo-1565057824294-36bdf6a28a5c?w=500&h=300&fit=crop",
     },
     {
-      id: 2,
-      title: "Homemade Pizza Margherita",
-      description: "Classic Italian pizza with fresh basil and mozzarella",
-      image_url: "https://images.unsplash.com/photo-1590534247854-3d4e52ea60f3?w=500&h=300&fit=crop",
+      id: 4,
+      title: "Musaca Traditionala",
+      description: "Musaca delicioasa cu straturi de vinete si carne tocata",
+      image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&h=300&fit=crop",
     },
     {
-      id: 3,
-      title: "Chocolate Chip Cookies",
-      description: "Perfectly chewy chocolate chip cookies that melt in your mouth",
-      image_url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=300&fit=crop",
+      id: 5,
+      title: "Tiramisu Italian",
+      description: "Desert italian clasic cu piscuri si crema mascarpone",
+      image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&h=300&fit=crop",
     }
   ];
 
@@ -37,14 +37,14 @@ const Home: React.FC = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
-            Welcome to
+            Bine ai venit la
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-500 block">
-              Recipe Book
+              Cartea de Retete
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Discover amazing recipes, share your culinary creations, and embark on a delicious journey of flavors from around the world.
+            Descopera retete uimitoare, impartaseste creatiile tale culinare si porneste intr-o calatorie delicioasa prin aromele din intreaga lume.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -52,13 +52,13 @@ const Home: React.FC = () => {
               to="/recipes" 
               className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Explore Recipes
+              Exploreaza Retetele
             </Link>
             <Link 
               to="/add-recipe" 
               className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-emerald-600 dark:text-emerald-400 border-2 border-emerald-600 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Add Your Recipe
+              Adauga Reteta Ta
             </Link>
           </div>
         </div>
@@ -69,10 +69,10 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Why Choose Recipe Book?
+              De ce sa alegi Cartea de Retete?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Everything you need to discover, create, and share amazing recipes in one beautiful platform.
+              Tot ce ai nevoie pentru a descoperi, crea si impartasi retete uimitoare intr-o singura platforma frumoasa.
             </p>
           </div>
 
@@ -81,9 +81,9 @@ const Home: React.FC = () => {
               <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Search className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Discover Recipes</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Descopera Retete</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Find the perfect recipe for any occasion with our powerful search and filter options.
+                Gaseste reteta perfecta pentru orice ocazie cu optiunile noastre puternice de cautare si filtrare.
               </p>
             </div>
 
@@ -91,9 +91,9 @@ const Home: React.FC = () => {
               <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <ChefHat className="w-8 h-8 text-orange-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Share Creations</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Impartaseste Creatii</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Upload your own recipes and share your culinary masterpieces with the community.
+                Incarca propriile retete si impartaseste capodoperele tale culinare cu comunitatea.
               </p>
             </div>
 
@@ -101,9 +101,9 @@ const Home: React.FC = () => {
               <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <BookOpen className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Organize & Save</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Organizeaza si Salveaza</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Keep all your favorite recipes organized and easily accessible whenever you need them.
+                Pastreaza toate retetele tale favorite organizate si usor accesibile ori de cate ori ai nevoie de ele.
               </p>
             </div>
           </div>
@@ -115,10 +115,10 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Featured Recipes
+              Retete Recomandate
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Try these popular recipes loved by our community
+              Incearca aceste retete populare iubite de comunitatea noastra
             </p>
           </div>
 
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
               to="/recipes" 
               className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
-              View All Recipes
+              Vezi Toate Retetele
             </Link>
           </div>
         </div>
