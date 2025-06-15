@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <ChefHat className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">Recipe Book</span>
+            <span className="text-2xl font-bold text-gray-900 dark:text-white">Cartea de Retete</span>
           </Link>
 
           {/* Navigation */}
@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 isActive('/') ? 'text-emerald-600' : 'text-gray-700 dark:text-gray-300'
               }`}
             >
-              Home
+              Acasa
             </Link>
             <Link 
               to="/recipes" 
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 isActive('/recipes') ? 'text-emerald-600' : 'text-gray-700 dark:text-gray-300'
               }`}
             >
-              Recipes
+              Retete
             </Link>
             <Link 
               to="/add-recipe" 
@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 isActive('/add-recipe') ? 'text-emerald-600' : 'text-gray-700 dark:text-gray-300'
               }`}
             >
-              Add Recipe
+              Adauga Reteta
             </Link>
           </nav>
 
@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
-                placeholder="Search recipes..."
+                placeholder="Cauta retete..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 pr-4 py-2 w-64 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"

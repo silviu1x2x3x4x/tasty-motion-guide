@@ -74,22 +74,22 @@ const AddRecipe: React.FC = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Add New Recipe
+            Adauga Reteta Noua
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Share your culinary creation with the community
+            Impartaseste creatia ta culinara cu comunitatea
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
           {/* Basic Information */}
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Basic Information</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Informatii de Baza</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="md:col-span-2">
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Recipe Title *
+                  Titlul Retetei *
                 </label>
                 <input
                   type="text"
@@ -98,13 +98,13 @@ const AddRecipe: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                  placeholder="Enter recipe title"
+                  placeholder="Introdu titlul retetei"
                 />
               </div>
 
               <div className="md:col-span-2">
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Description *
+                  Descriere *
                 </label>
                 <textarea
                   name="description"
@@ -113,13 +113,13 @@ const AddRecipe: React.FC = () => {
                   required
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Describe your recipe"
+                  placeholder="Descrie reteta ta"
                 />
               </div>
 
               <div className="md:col-span-2">
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Image URL
+                  URL Imagine
                 </label>
                 <div className="relative">
                   <Upload className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -129,14 +129,14 @@ const AddRecipe: React.FC = () => {
                     value={formData.image_url}
                     onChange={handleInputChange}
                     className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                    placeholder="https://example.com/image.jpg"
+                    placeholder="https://exemplu.com/imagine.jpg"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Prep Time
+                  Timp Pregatire
                 </label>
                 <input
                   type="text"
@@ -144,13 +144,13 @@ const AddRecipe: React.FC = () => {
                   value={formData.prep_time}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                  placeholder="e.g., 20 minutes"
+                  placeholder="ex. 20 minute"
                 />
               </div>
 
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Cook Time
+                  Timp Gatire
                 </label>
                 <input
                   type="text"
@@ -158,13 +158,13 @@ const AddRecipe: React.FC = () => {
                   value={formData.cook_time}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                  placeholder="e.g., 30 minutes"
+                  placeholder="ex. 30 minute"
                 />
               </div>
 
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
-                  Servings
+                  Portii
                 </label>
                 <input
                   type="number"
@@ -182,14 +182,14 @@ const AddRecipe: React.FC = () => {
           {/* Ingredients */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Ingredients *</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Ingrediente *</h2>
               <button
                 type="button"
                 onClick={() => addArrayItem('ingredients')}
                 className="flex items-center space-x-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
-                <span>Add Ingredient</span>
+                <span>Adauga Ingredient</span>
               </button>
             </div>
 
@@ -223,14 +223,14 @@ const AddRecipe: React.FC = () => {
           {/* Instructions */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Instructions *</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Instructiuni *</h2>
               <button
                 type="button"
                 onClick={() => addArrayItem('instructions')}
                 className="flex items-center space-x-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
-                <span>Add Step</span>
+                <span>Adauga Pas</span>
               </button>
             </div>
 
@@ -247,7 +247,7 @@ const AddRecipe: React.FC = () => {
                       required
                       rows={3}
                       className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                      placeholder={`Step ${index + 1} instructions`}
+                      placeholder={`Instructiuni pasul ${index + 1}`}
                     />
                   </div>
                   {formData.instructions.length > 1 && (
@@ -271,7 +271,7 @@ const AddRecipe: React.FC = () => {
               disabled={isSubmitting}
               className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white rounded-xl font-semibold text-lg transition-all duration-300 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Adding Recipe...' : 'Add Recipe'}
+              {isSubmitting ? 'Se adauga reteta...' : 'Adauga Reteta'}
             </button>
           </div>
         </form>
