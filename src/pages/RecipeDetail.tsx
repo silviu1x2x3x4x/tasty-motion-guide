@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, ChefHat } from 'lucide-react';
@@ -10,33 +9,32 @@ const RecipeDetail: React.FC = () => {
   const mockRecipes = [
     {
       id: 1,
-      title: "Tochitura Moldoveneasca",
-      description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza. O mancare consistenta si delicioasa care iti aduce aromele autentic romanesti la masa.",
-      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
+      title: "Crispy Strips de Pui",
+      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch. O alternativa sanatoasa la fast-food-ul traditional.",
+      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
       ingredients: [
-        "500g carne de porc tocata",
-        "200g carnati",
-        "4 oua",
-        "2 cepe mari",
-        "3 catei de usturoi",
-        "2 linguri ulei",
+        "500g piept de pui",
+        "2 cani faina",
+        "3 oua",
+        "2 cani pesmet",
+        "1 lingurita paprika",
+        "1 lingurita usturoi granulat",
+        "1 lingurita oregano",
         "Sare si piper dupa gust",
-        "Mamaliga pentru servire",
-        "Branza telemea",
-        "Smantana pentru servire"
+        "Ulei pentru prajire",
+        "Sos ranch pentru servire"
       ],
       instructions: [
-        "Incalzeste uleiul intr-o tigaie mare si prajeste carnea tocata pana devine rumena.",
-        "Adauga ceapa tocata marunt si gateste pana se inmoaie.",
-        "Adauga usturoi tocate si prajeste inca 1 minut.",
-        "Taie carnatii rondele si adauga-i in tigaie.",
-        "Gateste totul impreuna timp de 10-15 minute.",
-        "Condimenteaza cu sare si piper dupa gust.",
-        "Rou ouale intr-o tigaie separata.",
-        "Serveste tochitura cu mamaliga, oua prajite, branza si smantana."
+        "Taie pieptul de pui in fasii de aproximativ 1cm grosime.",
+        "Pregateste trei boluri: unul cu faina condimentata, unul cu oua batute si unul cu pesmet amestecat cu condimente.",
+        "Trece fiecare fasie de pui prin faina, apoi prin ou si in final prin pesmet.",
+        "Incalzeste uleiul intr-o tigaie mare la foc mediu-mare.",
+        "Prajeste strip-urile de pui timp de 3-4 minute pe fiecare parte pana devin aurii.",
+        "Scoate pe hartie absorbanta pentru a elimina uleiul in exces.",
+        "Serveste imediat cu sos ranch si legume proaspete."
       ],
-      prep_time: "15 minute",
-      cook_time: "25 minute",
+      prep_time: "20 minute",
+      cook_time: "15 minute",
       servings: 4,
       created_at: "2024-01-15"
     },
@@ -75,32 +73,33 @@ const RecipeDetail: React.FC = () => {
     },
     {
       id: 3,
-      title: "Crispy Strips de Pui",
-      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch. O alternativa sanatoasa la fast-food-ul traditional.",
-      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
+      title: "Tochitura Moldoveneasca",
+      description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza. O mancare consistenta si delicioasa care iti aduce aromele autentic romanesti la masa.",
+      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
       ingredients: [
-        "500g piept de pui",
-        "2 cani faina",
-        "3 oua",
-        "2 cani pesmet",
-        "1 lingurita paprika",
-        "1 lingurita usturoi granulat",
-        "1 lingurita oregano",
+        "500g carne de porc tocata",
+        "200g carnati",
+        "4 oua",
+        "2 cepe mari",
+        "3 catei de usturoi",
+        "2 linguri ulei",
         "Sare si piper dupa gust",
-        "Ulei pentru prajire",
-        "Sos ranch pentru servire"
+        "Mamaliga pentru servire",
+        "Branza telemea",
+        "Smantana pentru servire"
       ],
       instructions: [
-        "Taie pieptul de pui in fasii de aproximativ 1cm grosime.",
-        "Pregateste trei boluri: unul cu faina condimentata, unul cu oua batute si unul cu pesmet amestecat cu condimente.",
-        "Trece fiecare fasie de pui prin faina, apoi prin ou si in final prin pesmet.",
-        "Incalzeste uleiul intr-o tigaie mare la foc mediu-mare.",
-        "Prajeste strip-urile de pui timp de 3-4 minute pe fiecare parte pana devin aurii.",
-        "Scoate pe hartie absorbanta pentru a elimina uleiul in exces.",
-        "Serveste imediat cu sos ranch si legume proaspete."
+        "Incalzeste uleiul intr-o tigaie mare si prajeste carnea tocata pana devine rumena.",
+        "Adauga ceapa tocata marunt si gateste pana se inmoaie.",
+        "Adauga usturoi tocate si prajeste inca 1 minut.",
+        "Taie carnatii rondele si adauga-i in tigaie.",
+        "Gateste totul impreuna timp de 10-15 minute.",
+        "Condimenteaza cu sare si piper dupa gust.",
+        "Rou ouale intr-o tigaie separata.",
+        "Serveste tochitura cu mamaliga, oua prajite, branza si smantana."
       ],
-      prep_time: "20 minute",
-      cook_time: "15 minute",
+      prep_time: "15 minute",
+      cook_time: "25 minute",
       servings: 4,
       created_at: "2024-01-13"
     },
@@ -199,6 +198,102 @@ const RecipeDetail: React.FC = () => {
       cook_time: "50 minute",
       servings: 8,
       created_at: "2024-01-10"
+    },
+    {
+      id: 7,
+      title: "Tort Jouffre",
+      description: "Tort elegant cu ciocolata neagra si crema bogata, perfect pentru ocazii speciale. Un desert rafinat care va impresiona pe toata lumea.",
+      image_url: "/lovable-uploads/10990698-622e-4918-acb3-6545e6011935.png",
+      ingredients: [
+        "200g ciocolata neagra",
+        "150g unt",
+        "6 oua",
+        "150g zahar",
+        "80g faina",
+        "300ml smantana de frisca",
+        "200g ciocolata pentru glazura",
+        "100ml lapte",
+        "2 linguri miere",
+        "Fructe pentru decorat"
+      ],
+      instructions: [
+        "Topeste ciocolata cu untul la bain-marie.",
+        "Bate ouale cu zaharul pana se albestesc.",
+        "Incorporeaza ciocolata topita si faina.",
+        "Coace blatul la 180°C timp de 25-30 minute.",
+        "Prepara crema batand smantana cu putina ciocolata topita.",
+        "Taie blatul in doua si umple cu crema.",
+        "Prepara glazura topind ciocolata cu laptele si mierea.",
+        "Acopera tortul cu glazura si lasa sa se intareasca.",
+        "Decoreaza cu fructe proaspete inainte de servire."
+      ],
+      prep_time: "45 minute",
+      cook_time: "30 minute",
+      servings: 12,
+      created_at: "2024-01-09"
+    },
+    {
+      id: 8,
+      title: "Quesadilla de Pui",
+      description: "Quesadilla mexicana delicioasa cu pui condimentat si branza topita. O masa rapida si satiosa pentru orice moment al zilei.",
+      image_url: "/lovable-uploads/84d02c82-4de7-45f2-96db-68feac781e7a.png",
+      ingredients: [
+        "4 tortilla de grau",
+        "400g piept de pui",
+        "200g branza cheddar rasa",
+        "1 ardei gras rosu",
+        "1 ceapa medie",
+        "2 linguri ulei",
+        "1 lingurita chili pudra",
+        "1 lingurita cumin",
+        "Sare si piper",
+        "Sos salsa pentru servire"
+      ],
+      instructions: [
+        "Taie puiul in cuburi mici si condimenteaza cu chili, cumin, sare si piper.",
+        "Prajeste puiul in ulei pana se rumeneste si se coace complet.",
+        "Taie ardeii si ceapa fasii subtiri si prajeste-le putin.",
+        "Pe o jumatate din tortilla pune branza, puiul si legumele.",
+        "Acopera cu cealalta jumatate si apasa usor.",
+        "Prajeste quesadilla intr-o tigaie la foc mediu 2-3 minute pe parte.",
+        "Taie in felii si serveste imediat cu sos salsa.",
+        "Poti adauga smantana sau guacamole pentru mai mult gust."
+      ],
+      prep_time: "15 minute",
+      cook_time: "20 minute",
+      servings: 4,
+      created_at: "2024-01-08"
+    },
+    {
+      id: 9,
+      title: "Toast cu Avocado",
+      description: "Toast sanatos si nutritiv cu avocado cremos, perfect pentru un mic dejun rapid. Bogat in vitamine si grasimi sanatoase.",
+      image_url: "/lovable-uploads/14406302-50d3-4be3-8ef1-7ba79e289380.png",
+      ingredients: [
+        "4 felii paine integrala",
+        "2 avocado coapte",
+        "1 lamaie (zeama)",
+        "Sare si piper dupa gust",
+        "200g rosii cherry",
+        "2 linguri seminte",
+        "Ulei de masline",
+        "Frunze de busuioc",
+        "Optional: ou fiert"
+      ],
+      instructions: [
+        "Prajeste feliile de paine pana devin rumene si crocante.",
+        "Taie avocado in doua, scoate samburile si zdrobeste cu furculita.",
+        "Adauga zeama de lamaie, sare si piper peste avocado.",
+        "Intinde pasta de avocado uniform pe paine.",
+        "Taie rosiile cherry in jumatati si asaza peste avocado.",
+        "Presara semintele si frunzele de busuioc.",
+        "Stropeste cu putina zeama de lamaie si ulei de masline.",
+        "Serveste imediat pentru a pastra textura crocanta."
+      ],
+      prep_time: "10 minute",
+      cook_time: "5 minute",
+      servings: 4,
+      created_at: "2024-01-07"
     }
   ];
 

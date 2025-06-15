@@ -6,13 +6,13 @@ import { ChefHat, Search, BookOpen, Heart, Sparkles, Users } from 'lucide-react'
 const Home: React.FC = () => {
   const featuredRecipes = [
     {
-      id: 1,
+      id: 3,
       title: "Tochitura Moldoveneasca",
       description: "Traditionala tochitura moldoveneasca cu carne de porc si carnati",
       image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
     },
     {
-      id: 3,
+      id: 1,
       title: "Crispy Strips de Pui",
       description: "Fasii de pui crocante si delicioase cu sos de ranch",
       image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",

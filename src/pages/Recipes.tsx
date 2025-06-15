@@ -7,7 +7,7 @@ import RecipeCard from '../components/RecipeCard';
 const Recipes: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('search') || '');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('toate');
 
   // Update search query when URL params change
   useEffect(() => {
@@ -19,12 +19,13 @@ const Recipes: React.FC = () => {
   const mockRecipes = [
     {
       id: 1,
-      title: "Tochitura Moldoveneasca",
-      description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza.",
-      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
-      ingredients: "Carne de porc, carnati, oua, ceapa, usturoi, mamaliga",
-      instructions: "Prajeste carnea, adauga carnatii, serveste cu oua si mamaliga",
-      created_at: "2024-01-15"
+      title: "Crispy Strips de Pui",
+      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch.",
+      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
+      ingredients: "Piept de pui, faina, oua, pesmet, condimente, ulei",
+      instructions: "Taie puiul fasii, panez si prajeste pana devine auriu",
+      created_at: "2024-01-15",
+      category: ["pranz", "cina"]
     },
     {
       id: 2,
@@ -33,16 +34,18 @@ const Recipes: React.FC = () => {
       image_url: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500&h=300&fit=crop",
       ingredients: "Aluat de pizza, sos de rosii, mozzarella, busuioc",
       instructions: "Intinde aluatul, adauga toppingurile, coace la 450°F",
-      created_at: "2024-01-14"
+      created_at: "2024-01-14",
+      category: ["pranz", "cina"]
     },
     {
       id: 3,
-      title: "Crispy Strips de Pui",
-      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch.",
-      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
-      ingredients: "Piept de pui, faina, oua, pesmet, condimente, ulei",
-      instructions: "Taie puiul fasii, panez si prajeste pana devine auriu",
-      created_at: "2024-01-13"
+      title: "Tochitura Moldoveneasca",
+      description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza.",
+      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
+      ingredients: "Carne de porc, carnati, oua, ceapa, usturoi, mamaliga",
+      instructions: "Prajeste carnea, adauga carnatii, serveste cu oua si mamaliga",
+      created_at: "2024-01-13",
+      category: ["pranz", "cina"]
     },
     {
       id: 4,
@@ -51,7 +54,8 @@ const Recipes: React.FC = () => {
       image_url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=300&fit=crop",
       ingredients: "Faina, unt, zahar, bucati de ciocolata, oua",
       instructions: "Amesteca ingredientele, formeaza bilute, coace timp de 12 minute",
-      created_at: "2024-01-12"
+      created_at: "2024-01-12",
+      category: ["desert"]
     },
     {
       id: 5,
@@ -60,7 +64,8 @@ const Recipes: React.FC = () => {
       image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&h=300&fit=crop",
       ingredients: "Piscuri, cafea, mascarpone, oua, zahar, cacao",
       instructions: "Alternează straturile de piscuri cu crema, raceste peste noapte",
-      created_at: "2024-01-11"
+      created_at: "2024-01-11",
+      category: ["desert"]
     },
     {
       id: 6,
@@ -69,7 +74,38 @@ const Recipes: React.FC = () => {
       image_url: "/lovable-uploads/3b57eb1c-4af9-480e-8c21-0da92a393a71.png",
       ingredients: "Faina, oua, zahar, lapte, unt, praf de copt",
       instructions: "Amesteca ingredientele, toarna in forma, coace la cuptor",
-      created_at: "2024-01-10"
+      created_at: "2024-01-10",
+      category: ["desert"]
+    },
+    {
+      id: 7,
+      title: "Tort Jouffre",
+      description: "Tort elegant cu ciocolata neagra si crema bogata, perfect pentru ocazii speciale.",
+      image_url: "/lovable-uploads/10990698-622e-4918-acb3-6545e6011935.png",
+      ingredients: "Ciocolata neagra, unt, oua, zahar, faina, smantana",
+      instructions: "Prepara blatul, fa crema de ciocolata, asambleaza si raceste",
+      created_at: "2024-01-09",
+      category: ["desert"]
+    },
+    {
+      id: 8,
+      title: "Quesadilla de Pui",
+      description: "Quesadilla mexicana delicioasa cu pui condimentat si branza topita.",
+      image_url: "/lovable-uploads/84d02c82-4de7-45f2-96db-68feac781e7a.png",
+      ingredients: "Tortilla, piept de pui, branza cheddar, ardei gras, ceapa",
+      instructions: "Gateste puiul, umple tortilla, prajeste pana se rumeneste",
+      created_at: "2024-01-08",
+      category: ["mic dejun", "pranz"]
+    },
+    {
+      id: 9,
+      title: "Toast cu Avocado",
+      description: "Toast sanatos si nutritiv cu avocado cremos, perfect pentru un mic dejun rapid.",
+      image_url: "/lovable-uploads/14406302-50d3-4be3-8ef1-7ba79e289380.png",
+      ingredients: "Paine integrala, avocado, lamaie, sare, piper, rosii cherry",
+      instructions: "Prajeste paina, zdrobeste avocado, garniseste cu rosii",
+      created_at: "2024-01-07",
+      category: ["mic dejun", "gustare"]
     }
   ];
 
@@ -78,7 +114,11 @@ const Recipes: React.FC = () => {
   const filteredRecipes = mockRecipes.filter(recipe => {
     const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          recipe.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesSearch;
+    
+    const matchesCategory = selectedCategory === 'toate' || 
+                           recipe.category.includes(selectedCategory);
+    
+    return matchesSearch && matchesCategory;
   });
 
   const handleSearchChange = (value: string) => {
@@ -142,6 +182,7 @@ const Recipes: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400">
             Se afiseaza {filteredRecipes.length} reteta{filteredRecipes.length !== 1 ? 's' : ''}
             {searchQuery && ` pentru "${searchQuery}"`}
+            {selectedCategory !== 'toate' && ` in categoria "${selectedCategory}"`}
           </p>
         </div>
 
@@ -164,10 +205,13 @@ const Recipes: React.FC = () => {
               Incearca sa ajustezi cautarea sau navighează prin toate retetele.
             </p>
             <button
-              onClick={() => handleSearchChange('')}
+              onClick={() => {
+                handleSearchChange('');
+                setSelectedCategory('toate');
+              }}
               className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-all duration-300"
             >
-              Sterge Cautarea
+              Sterge Filtrele
             </button>
           </div>
         )}
