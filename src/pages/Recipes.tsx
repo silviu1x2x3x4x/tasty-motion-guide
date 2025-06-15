@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -21,7 +20,7 @@ const Recipes: React.FC = () => {
       id: 1,
       title: "Tochitura Moldoveneasca",
       description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza.",
-      image_url: "https://images.unsplash.com/photo-1565057824294-36bdf6a28a5c?w=500&h=300&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1604909052743-94e838986d24?w=500&h=300&fit=crop",
       ingredients: "Carne de porc, carnati, oua, ceapa, usturoi, mamaliga",
       instructions: "Prajeste carnea, adauga carnatii, serveste cu oua si mamaliga",
       created_at: "2024-01-15"
@@ -30,7 +29,7 @@ const Recipes: React.FC = () => {
       id: 2,
       title: "Pizza Margherita de Casa",
       description: "Pizza italiana clasica cu busuioc proaspat, mozzarella si o crusta crocanta facuta in casa.",
-      image_url: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500&h=300&fit=crop",
       ingredients: "Aluat de pizza, sos de rosii, mozzarella, busuioc",
       instructions: "Intinde aluatul, adauga toppingurile, coace la 450°F",
       created_at: "2024-01-14"
