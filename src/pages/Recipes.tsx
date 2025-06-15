@@ -1,13 +1,21 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import RecipeCard from '../components/RecipeCard';
 
 const Recipes: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('search') || '');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Mock data - this will be replaced with Supabase data
+  // Update search query when URL params change
+  useEffect(() => {
+    const searchFromUrl = searchParams.get('search') || '';
+    setSearchQuery(searchFromUrl);
+  }, [searchParams]);
+
+  // Mock data with updated images for Margherita and Beef Tacos
   const mockRecipes = [
     {
       id: 1,
@@ -73,6 +81,15 @@ const Recipes: React.FC = () => {
     return matchesSearch;
   });
 
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    if (value.trim()) {
+      setSearchParams({ search: value.trim() });
+    } else {
+      setSearchParams({});
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
       <div className="container mx-auto px-4">
@@ -96,7 +113,7 @@ const Recipes: React.FC = () => {
                 type="text"
                 placeholder="Search recipes by name or ingredient..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
               />
             </div>
@@ -147,7 +164,7 @@ const Recipes: React.FC = () => {
               Try adjusting your search or browse all recipes.
             </p>
             <button
-              onClick={() => setSearchQuery('')}
+              onClick={() => handleSearchChange('')}
               className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-all duration-300"
             >
               Clear Search
