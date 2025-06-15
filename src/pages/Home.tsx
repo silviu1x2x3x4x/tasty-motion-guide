@@ -9,19 +9,19 @@ const Home: React.FC = () => {
       id: 1,
       title: "Tochitura Moldoveneasca",
       description: "Traditionala tochitura moldoveneasca cu carne de porc si carnati",
-      image_url: "https://images.unsplash.com/photo-1565057824294-36bdf6a28a5c?w=500&h=300&fit=crop",
+      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
     },
     {
-      id: 4,
-      title: "Musaca Traditionala",
-      description: "Musaca delicioasa cu straturi de vinete si carne tocata",
-      image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&h=300&fit=crop",
+      id: 3,
+      title: "Crispy Strips de Pui",
+      description: "Fasii de pui crocante si delicioase cu sos de ranch",
+      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
     },
     {
-      id: 5,
-      title: "Tiramisu Italian",
-      description: "Desert italian clasic cu piscuri si crema mascarpone",
-      image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&h=300&fit=crop",
+      id: 6,
+      title: "Chec de Casa",
+      description: "Chec pufos si aromat de casa, perfect pentru micul dejun",
+      image_url: "/lovable-uploads/3b57eb1c-4af9-480e-8c21-0da92a393a71.png",
     }
   ];
 

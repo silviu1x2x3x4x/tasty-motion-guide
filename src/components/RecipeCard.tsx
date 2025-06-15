@@ -36,7 +36,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
             {recipe.description}
           </p>
           <div className="mt-4 flex items-center justify-between">
-            <span className="text-sm text-emerald-600 font-medium">View Recipe</span>
+            <span className="text-sm text-emerald-600 font-medium">Vezi Reteta</span>
             <div className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center group-hover:bg-emerald-200 dark:group-hover:bg-emerald-800 transition-colors">
               <span className="text-emerald-600 text-sm">→</span>
             </div>

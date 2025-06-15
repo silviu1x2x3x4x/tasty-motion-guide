@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -20,7 +21,7 @@ const Recipes: React.FC = () => {
       id: 1,
       title: "Tochitura Moldoveneasca",
       description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza.",
-      image_url: "https://images.unsplash.com/photo-1604909052743-94e838986d24?w=500&h=300&fit=crop",
+      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
       ingredients: "Carne de porc, carnati, oua, ceapa, usturoi, mamaliga",
       instructions: "Prajeste carnea, adauga carnatii, serveste cu oua si mamaliga",
       created_at: "2024-01-15"
@@ -36,20 +37,20 @@ const Recipes: React.FC = () => {
     },
     {
       id: 3,
+      title: "Crispy Strips de Pui",
+      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch.",
+      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
+      ingredients: "Piept de pui, faina, oua, pesmet, condimente, ulei",
+      instructions: "Taie puiul fasii, panez si prajeste pana devine auriu",
+      created_at: "2024-01-13"
+    },
+    {
+      id: 4,
       title: "Biscuiti cu Bucati de Ciocolata",
       description: "Biscuiti perfecti cu bucati de ciocolata care se topesc in gura la fiecare muscatura.",
       image_url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=300&fit=crop",
       ingredients: "Faina, unt, zahar, bucati de ciocolata, oua",
       instructions: "Amesteca ingredientele, formeaza bilute, coace timp de 12 minute",
-      created_at: "2024-01-13"
-    },
-    {
-      id: 4,
-      title: "Musaca Traditionala",
-      description: "Musaca delicioasa cu straturi de vinete, carne tocata si sos bechamel cremos.",
-      image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&h=300&fit=crop",
-      ingredients: "Vinete, carne tocata, sos bechamel, rosii, ceapa",
-      instructions: "Stratifică vinetele cu carnea si sosul, coace la cuptor",
       created_at: "2024-01-12"
     },
     {
@@ -65,7 +66,7 @@ const Recipes: React.FC = () => {
       id: 6,
       title: "Chec de Casa",
       description: "Chec pufos si aromat de casa, perfect pentru micul dejun sau o gustare dulce.",
-      image_url: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&h=300&fit=crop",
+      image_url: "/lovable-uploads/3b57eb1c-4af9-480e-8c21-0da92a393a71.png",
       ingredients: "Faina, oua, zahar, lapte, unt, praf de copt",
       instructions: "Amesteca ingredientele, toarna in forma, coace la cuptor",
       created_at: "2024-01-10"

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, ChefHat } from 'lucide-react';
@@ -11,7 +12,7 @@ const RecipeDetail: React.FC = () => {
       id: 1,
       title: "Tochitura Moldoveneasca",
       description: "Traditionala tochitura moldoveneasca cu carne de porc, carnati si oua, servita cu mamaliga si branza. O mancare consistenta si delicioasa care iti aduce aromele autentic romanesti la masa.",
-      image_url: "https://images.unsplash.com/photo-1604909052743-94e838986d24?w=800&h=600&fit=crop",
+      image_url: "/lovable-uploads/59c659fc-c470-4130-86f0-a792ec0eb9f1.png",
       ingredients: [
         "500g carne de porc tocata",
         "200g carnati",
@@ -74,6 +75,37 @@ const RecipeDetail: React.FC = () => {
     },
     {
       id: 3,
+      title: "Crispy Strips de Pui",
+      description: "Fasii de pui crocante si delicioase, perfecte pentru o gustare sau o masa rapida cu sos de ranch. O alternativa sanatoasa la fast-food-ul traditional.",
+      image_url: "/lovable-uploads/618c6e81-2ef0-4a14-af3d-1dff5231113b.png",
+      ingredients: [
+        "500g piept de pui",
+        "2 cani faina",
+        "3 oua",
+        "2 cani pesmet",
+        "1 lingurita paprika",
+        "1 lingurita usturoi granulat",
+        "1 lingurita oregano",
+        "Sare si piper dupa gust",
+        "Ulei pentru prajire",
+        "Sos ranch pentru servire"
+      ],
+      instructions: [
+        "Taie pieptul de pui in fasii de aproximativ 1cm grosime.",
+        "Pregateste trei boluri: unul cu faina condimentata, unul cu oua batute si unul cu pesmet amestecat cu condimente.",
+        "Trece fiecare fasie de pui prin faina, apoi prin ou si in final prin pesmet.",
+        "Incalzeste uleiul intr-o tigaie mare la foc mediu-mare.",
+        "Prajeste strip-urile de pui timp de 3-4 minute pe fiecare parte pana devin aurii.",
+        "Scoate pe hartie absorbanta pentru a elimina uleiul in exces.",
+        "Serveste imediat cu sos ranch si legume proaspete."
+      ],
+      prep_time: "20 minute",
+      cook_time: "15 minute",
+      servings: 4,
+      created_at: "2024-01-13"
+    },
+    {
+      id: 4,
       title: "Biscuiti cu Bucati de Ciocolata",
       description: "Biscuiti perfecti cu bucati de ciocolata care se topesc in gura la fiecare muscatura. Mancarea de confort suprema care nu se demodeaza niciodata.",
       image_url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&h=600&fit=crop",
@@ -102,41 +134,6 @@ const RecipeDetail: React.FC = () => {
       prep_time: "15 minute",
       cook_time: "12 minute",
       servings: 36,
-      created_at: "2024-01-13"
-    },
-    {
-      id: 4,
-      title: "Musaca Traditionala",
-      description: "Musaca delicioasa cu straturi de vinete, carne tocata si sos bechamel cremos. O mancare sanatoasa si delicioasa gata in cateva minute.",
-      image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&h=600&fit=crop",
-      ingredients: [
-        "3 vinete mari",
-        "500g carne tocata (vita sau miel)",
-        "2 cepe tocate",
-        "3 catei de usturoi",
-        "400g rosii conserva",
-        "2 linguri pasta de rosii",
-        "1/2 cana vin rosu",
-        "50g unt",
-        "3 linguri faina",
-        "500ml lapte",
-        "100g parmezan ras",
-        "2 oua",
-        "Ulei de masline, sare, piper"
-      ],
-      instructions: [
-        "Taie vinetele felii si sarea-le, lasa 30 minute apoi clasteste.",
-        "Prajeste vinetele in ulei pana se rumenesc, lasa pe prosop.",
-        "Sotează carnea cu ceapa si usturoiul pana se rumeneste.",
-        "Adauga rosiile, pasta de rosii si vinul, fierbe 20 minute.",
-        "Pentru bechamel: topeste untul, adauga faina, apoi laptele treptat.",
-        "Fierbe pana se ingroasa, adauga branza si ouale batute.",
-        "Alterneaza straturi de vinete si carne intr-o tava.",
-        "Acopera cu bechamel si coace la 180°C timp de 45 minute."
-      ],
-      prep_time: "45 minute",
-      cook_time: "45 minute",
-      servings: 6,
       created_at: "2024-01-12"
     },
     {
@@ -175,7 +172,7 @@ const RecipeDetail: React.FC = () => {
       id: 6,
       title: "Chec de Casa",
       description: "Chec pufos si aromat de casa, perfect pentru micul dejun sau o gustare dulce. Perfect pentru o cina rapida in timpul saptamanii sau pentru weekend.",
-      image_url: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=800&h=600&fit=crop",
+      image_url: "/lovable-uploads/3b57eb1c-4af9-480e-8c21-0da92a393a71.png",
       ingredients: [
         "4 oua",
         "200g zahar",
@@ -281,7 +278,7 @@ const RecipeDetail: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">Portii</h3>
-                <p className="text-gray-600 dark:text-gray-400">{recipe.servings} {recipe.servings === 1 ? 'persoana' : recipe.id === 3 ? 'biscuiti' : 'persoane'}</p>
+                <p className="text-gray-600 dark:text-gray-400">{recipe.servings} {recipe.servings === 1 ? 'persoana' : recipe.id === 4 ? 'biscuiti' : 'persoane'}</p>
               </div>
             </div>
           </div>
