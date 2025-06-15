@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, ChefHat } from 'lucide-react';
@@ -44,7 +43,7 @@ const RecipeDetail: React.FC = () => {
       id: 2,
       title: "Homemade Pizza Margherita",
       description: "Classic Italian pizza with fresh basil, mozzarella, and a crispy homemade crust. A timeless recipe that brings the authentic taste of Italy to your kitchen.",
-      image_url: "https://images.unsplash.com/photo-1590534247854-3d4e52ea60f3?w=800&h=600&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=600&fit=crop",
       ingredients: [
         "2 cups all-purpose flour",
         "1 tsp active dry yeast",
@@ -167,7 +166,7 @@ const RecipeDetail: React.FC = () => {
       id: 6,
       title: "Beef Tacos",
       description: "Flavorful beef tacos with fresh toppings and homemade salsa. Perfect for a quick weeknight dinner or weekend gathering.",
-      image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&h=600&fit=crop",
       ingredients: [
         "1 lb ground beef",
         "1 packet taco seasoning",

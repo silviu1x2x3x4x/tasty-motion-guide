@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -30,7 +29,7 @@ const Recipes: React.FC = () => {
       id: 2,
       title: "Homemade Pizza Margherita",
       description: "Classic Italian pizza with fresh basil, mozzarella, and a crispy homemade crust.",
-      image_url: "https://images.unsplash.com/photo-1590534247854-3d4e52ea60f3?w=500&h=300&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop",
       ingredients: "Pizza dough, tomato sauce, mozzarella, basil",
       instructions: "Roll dough, add toppings, bake at 450°F",
       created_at: "2024-01-14"
@@ -66,7 +65,7 @@ const Recipes: React.FC = () => {
       id: 6,
       title: "Beef Tacos",
       description: "Flavorful beef tacos with fresh toppings and homemade salsa.",
-      image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop",
+      image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&h=300&fit=crop",
       ingredients: "Ground beef, taco shells, lettuce, tomatoes, cheese",
       instructions: "Cook beef with spices, assemble tacos with toppings",
       created_at: "2024-01-10"
